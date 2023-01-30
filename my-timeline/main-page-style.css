@@ -1,0 +1,96 @@
+:root {
+    --black-color: rgb(0, 0, 0);
+    --red-color: rgb(255, 0, 0);
+    --white-color: rgb(255, 255, 255);
+}
+
+body {
+    background-image: url(main-src/plain-blue.jpg);
+}
+
+h1 {
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Rubik Microbe', cursive;
+    font-size: 48px;
+    color: var(--red-color);
+    text-shadow:
+        1px 1px 2px var(--red-color),
+        3px 3px 3px var(--black-color),
+        3px -3px 3px var(--white-color);
+}
+
+.flex-elek {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.flex-elek li {
+    max-width: 300px;
+    max-height: 300px;
+    list-style: none;
+    border-radius: 30% 30% 30% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    box-shadow:
+        0px 0px 3px var(--red-color),
+        0px 0px 3px var(--red-color),
+        0px 0px 3px var(--red-color);
+}
+
+.flex-elek li:hover {
+    animation: red-glow 5s ease-in-out infinite;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes red-glow {
+    20% {
+        box-shadow:
+            0px 0px 3px var(--red-color),
+            0px 0px 5px var(--red-color),
+            0px 0px 7px var(--white-color);
+        transition: box-shadow 0.5s;
+        transform: scale(1.05);
+    }
+
+    40% {
+        box-shadow:
+            0px 0px 9px var(--red-color),
+            0px 0px 11px var(--red-color),
+            0px 0px 13px var(--white-color);
+        transition: box-shadow 0.5s;
+        transform: scale(1.1);
+    }
+
+    60% {
+        box-shadow:
+            0px 0px 15px var(--red-color),
+            0px 0px 17px var(--red-color),
+            0px 0px 19px var(--white-color);
+        transition: box-shadow 0.5s;
+        transform: scale(1.15);
+    }
+
+    80% {
+        box-shadow:
+            0px 0px 9px var(--red-color),
+            0px 0px 11px var(--red-color),
+            0px 0px 13px var(--white-color);
+        transition: box-shadow 0.5s;
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow:
+            0px 0px 1px var(--red-color),
+            0px 0px 2px var(--red-color),
+            0px 0px 3px var(--white-color);
+        transition: box-shadow 0.5s;
+        transform: scale(1.0);
+    }
+
+}

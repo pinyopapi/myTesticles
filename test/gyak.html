@@ -1,0 +1,242 @@
+<script>
+    // {
+    //     let o = { foo: 42 }
+    // }
+    // {
+    //     let v = 42;
+    //     let o = { bar: v }
+    // }
+    // function sum() {
+    //     let a = 1;
+    //     let b = 2;
+    //     let o = { sum: (a + b) }
+    //     console.log(o)
+    // }
+    // function testicles() {
+    //     let a = "foo";
+    //     let o = { a: 1 }
+    //     console.log(o.a)
+    // }
+
+    {/*
+        1.  let o = // ? => {foo:42}
+            o.foo  // 42
+
+        2.  {bar:v}
+        3.  {bar:(a+b)}
+        4.  {foo:42}
+        5.  {k:"zsoké"}
+        6.  {foo:"zsoké"}
+        7.  {"3+2":"kombiné"}
+        8.  {foo:{bar:42}}
+        9.  {foo:{bar:42}}
+        10. {foo:{foo:42}}
+    */}
+
+    //---------------------------------------------------------------------------
+    //moddelezés obj.
+    // {
+    //     let person = { name: "Alice", age: 32 }
+    //     console.log("5év mulva", person.name, person.age + 5)
+    // }
+    // {
+    //     let car = { brand: "Ford", model: "Mustang", date: 1970 }
+    //     console.log("Ma", 2022 - car.date, "éves a", car.brand, car.model)
+    // }
+    // {
+    //     let salary = {
+    //         bosses: {
+    //             Jani: 5000000
+    //         },
+    //         assistents: {
+    //             Mari: 300000
+    //         },
+    //         workers: {
+    //             Sanyi: 100000,
+    //             Juli: 100000,
+    //             'Cs.B': 100000
+    //         }
+    //     }
+    // }
+
+  
+    // ];
+    // //1.
+    // function mostExpensive() {
+    //     maxPrice = 0;
+    //     maxPriceIndex = 0;
+
+
+    //     for (let i = 0; i < etlap.length; i++) {
+    //         if (etlap[i].ar > maxPrice) {
+    //             maxPrice = etlap[i].ar;
+    //             maxPriceIndex = i
+    //         }
+    //     }
+    //     console.log(etlap[maxPriceIndex].megnevezes)
+    // }
+
+    // // mostExpensive();
+
+    //2.
+
+    // let etlap = [
+    //     {
+    //         megnevezes: "Földimogyoróvajas szendvics Labrador módra",
+    //         ar: 2000,
+    //         allergenek: ["földimogyoró", "toxikus pozitivitás"]
+    //     },
+    //     {
+    //         megnevezes: "Tejbegríz",
+    //         ar: 1000,
+    //         allergenek: ["laktóz"]
+    //     },
+    //     {
+    //         megnevezes: "Mr. Foo kedvence",
+    //         ar: 42000,
+    //         allergenek: ["javascript"]
+    //     }
+    // ]
+
+    // let vendegek = [ 
+    //     {
+    //         allergiak: ["laktóz"],
+    //         penz: 2000
+    //     },
+    //     {
+    //         allergiak: [],
+    //         penz: 5000
+    //     }
+    ]
+    /*
+        Adott a vendégek listája. Döntsd el, hogy ez az étterem alkalmas-e nekik! Egy
+        étterem alkalmas, ha mindenkinek van lehetősége enni valamit. Egy vendégnek
+        akkor van lehetősége enni valamit, ha van pénze legalább egy ételre, amire nem
+        allergiás.
+
+        bónusz: oldd meg a feladatot úgy, hogy nem az egyének pénzét veszed alapul,
+        hanem, hogy összesen van-e elegendő pénz, ha például összedobnák a pénzt
+        mindenkinek.
+    */
+
+    
+    // for(let i = 0; i < vendegek.length; i++){
+    //     for(let j = 0; j < etlap.length; j++){
+    //         if(etlap[j].ar > vendegek[i].penz){
+    //             vendegek[i].ehet = false;
+    //         }
+    //         if(vendegek[i].allergiak.length != 0){
+    //             for(let k = 0; k < etlap[j].allergenek.length; k++){
+    //                 if(vendegek[i].allergiak.includes(etlap[j].allergenek[k])){
+    //                     vendegek[i].ehet = false;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // let ehetnek = true;
+    // for(let i = 0; i < vendegek.length; i++){
+    //     if(!vendegek[i].ehet){
+    //         ehetnek = false;
+    //     }
+    // }
+
+    // console.log("Ehetnek = " + ehetnek);
+
+
+
+/*
+Decide whether our hypothethical person is frugal or not. The person is frugal
+if there is no month with a negative cashflow.
+
+The person’s financial transaction history is stored in an array. Each element
+is a monthly cashflow value.
+
+Examples:
+
+// not frugal                   oops
+let data = [200, 130, 150, 100, -20, 30, 40, 100];
+// frugal: no negatives         !
+let data = [200, 130, 150, 100, 0, 30, 40, 100];
+//frugal: no negatives
+let data = [200, 130, 150, 100, 100, 30, 40, 100];
+*/
+
+
+    let data = [
+        {
+            income: 240,
+            expense: 40
+        },
+        {
+            income: 200,
+            expense: 50
+        },
+        // oops: -20
+        {
+            income: 1000,
+            expense: 120
+        },
+        {
+            income: 100,
+            expense: 70
+        }
+    ];
+
+    let isFrugal = true;
+
+    for(let i = 0; i < data.length; i++){
+        if(data[i].income < data[i].expense) {
+            isFrugal = false;
+        }
+    }
+
+    alert(isFrugal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    // let allergenIndex = 0;
+
+    // for (let i = 0; i < etlap.length; i++){
+    //     if(etlap[i].allergenek.length > etlap[allergenIndex].allergenek.length){
+    //         allergenIndex = i;
+    //     }
+    // }
+    
+    // console.log(etlap[allergenIndex].megnevezes)
+
+
+    //---------------------------------------------------------------------------
+
+
+</script>

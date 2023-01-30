@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Arial";
+    font-weight: 600;
+}
+
+#logo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(209, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav ul {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a, header nav div a {
+    display: flex;
+    font-weight: 1000;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+header nav ul li a:hover{
+    background-color: rgb(162, 0, 0);
+    border-radius: 10px;
+}
+
+.search {
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.search img{
+    height: 20px;
+}
+
+.search input, .search input:focus {
+    border: none;
+    outline: none;
+    font-size: 23px;
+}
+
+.whole {
+    padding: 2% 10% 2% 10%;
+}
+
+.whole img{
+    border-radius: 20px;
+    border: 5px solid brown;
+}
+
+.whole > div {
+    width: 60%;
+}
+
+#article-flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+#article-flexbox > div > p {
+    padding: 5px;
+}
+
+#article-flexbox > div > p:first-child {
+    color: brown;
+    text-decoration: underline;
+}
+
+#article-flexbox > div > p:nth-child(2) {
+    font-size: 30px;
+    font-family: Almendra SC;
+}
+
+#article-flexbox div {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+#article-flexbox div p:last-child {
+    font-weight: 200;
+    
+}
+
+.whole div p {
+    padding: 15px;
+}

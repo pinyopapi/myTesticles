@@ -1,0 +1,69 @@
+body {
+    width: 1920px;
+    height: 1080px;
+    animation: myColores 5s infinite;
+  }
+
+h1 {
+    color: blueviolet;
+    text-align: center;
+    
+}
+
+form {
+    color: rgb(101, 81, 81);
+    font-size: 30px;
+}
+
+.text {
+    background-color: bisque;
+    color: rgb(93, 76, 76);
+    min-height:30px; 
+    min-width: 120px;
+    border: rgb(122, 111, 111);
+    border-radius:10px;
+    font-size: 30px;
+}
+
+.checkbox input:checked {
+    border-color: red;
+    background-color:red;
+}
+
+
+.button {
+    background-repeat: round;
+    background: radial-gradient(circle, rgb(185, 187, 65) 0%, rgb(145, 203, 58) 80%, rgb(225, 194, 17) 100%);
+    color: rgb(233, 132, 132);
+    min-height:30px; 
+    min-width: 120px;
+    border:none;
+    border-radius:10px;
+    font-size: 30px;
+}
+
+.button:hover {
+    transition: 0.4s;
+    box-shadow: 2px 2px 3px 3px rgba(145, 255, 0, 0.573);
+}
+
+.button:active {
+    background: radial-gradient(circle, rgba(151,255,0,1) 0%, rgba(255,221,20,1) 100%);
+    outline-color: transparent;
+    outline-style:solid;
+    transition: 0.7s;
+}
+
+@keyframes slideBar {
+    0% {top: 0px;}
+    50%  {top: 100px;}
+    100%   {top: 200px;}
+  }
+
+@keyframes myColores {
+    0%   {top: 0px; left: 0px; background: radial-gradient(circle at 100% 0%, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 25%, rgba(172, 212, 0, 1) 50%, rgba(255, 255, 255, 1) 75%, rgba(52, 225, 255, 1) 100%);}
+    25%  {top: 0px; left: 100px; background: radial-gradient(circle at 100% 0%, rgba(0, 188, 212, 1) 0%, rgba(172, 212, 0, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(52, 225, 255, 1) 75%, rgba(255, 255, 0, 1) 100%);}
+    50%  {top: 100px; left: 100px; background: radial-gradient(circle at 100% 0%, rgba(172, 212, 0, 1) 0%, rgba(255, 255, 255, 1) 25%, rgba(52, 225, 255, 1) 50%, rgba(255, 255, 0, 1) 75%, rgba(0, 188, 212, 1) 100%);}
+    75%  {top: 100px; left: 0px; background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 1) 0%, rgba(52, 225, 255, 1) 25%, rgba(255, 255, 0, 1) 50%, rgba(0, 188, 212, 1) 75%, rgba(172, 212, 0, 1) 100%);}
+    100% {top: 0px; left: 0px; background: radial-gradient(circle at 100% 0%, rgba(52, 225, 255, 1) 0%, rgba(255, 255, 0, 1) 25%, rgba(0, 188, 212, 1) 50%, rgba(172, 212, 0, 1) 75%, rgba(255, 255, 255, 1) 100%);}
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container {
+            display: grid;
+            border: 5px solid blue;
+            grid-template-columns: 50% 25% 15%; /* oszlopok */
+            grid-template-rows: 40% 25%; /* sorok */
+        }
+
+        .item {
+            border: 5px double rgb(255, 189, 182);
+        }
+
+        .piros {
+            margin: 1em;
+            border-color: rgb(255, 0, 0);
+        }
+
+        .padding {
+            padding: 2em;
+        }
+
+        .gap {
+           gap: 2em;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container gap">
+        <div class="item piros padding">1</div>
+        <div class="item piros">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item piros">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+    </div>
+</body>
+</html>

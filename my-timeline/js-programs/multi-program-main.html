@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="css/multi-program.css" />
+      <link rel="stylesheet" href="css/color-picker.css" />
+      <link rel="stylesheet" href="css/inspection.css" />
+
+      <title>Multi Programs</title>
+   </head>
+
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li><a href="../main-page.html">Back to Main page</a></li>
+               <li><a href="">Back to .....</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <div id="calculator-body">
+            <ul>
+               <li class="calc btn" id="history">History</li>
+               <li class="calc btn" id="current">Current</li>
+               <li><button class="calc btn" id="minus">-</button></li>
+               <li><button class="calc btn" id="times">*</button></li>
+               <li><button class="calc btn" id="division">/</button></li>
+               <li><button class="calc btn" id="zero">0</button></li>
+               <li><button class="calc btn" id="one">1</button></li>
+               <li><button class="calc btn" id="two">2</button></li>
+               <li><button class="calc btn" id="three">3</button></li>
+               <li><button class="calc btn" id="four">4</button></li>
+               <li><button class="calc btn" id="five">5</button></li>
+               <li><button class="calc btn" id="six">6</button></li>
+               <li><button class="calc btn" id="seven">7</button></li>
+               <li><button class="calc btn" id="eight">8</button></li>
+               <li><button class="calc btn" id="nine">9</button></li>
+               <li><button class="calc btn" id="plus">+</button></li>
+               <li><button class="calc btn" id="del">Del</button></li>
+               <li><button class="calc btn" id="sum">=</button></li>
+            </ul>
+         </div>
+         <div id="color-picker">
+            <input
+               type="radio"
+               name="color-radio"
+               class="clr-radio-btn"
+               id="simple"
+            />
+            <label for="simple">Simple</label>
+            <input
+               type="radio"
+               name="color-radio"
+               class="clr-radio-btn"
+               id="linear"
+            />
+            <label for="linear">Linear Colors</label>
+            <input
+               type="radio"
+               name="color-radio"
+               class="clr-radio-btn"
+               id="extra"
+            />
+            <label for="extra">Extra Color</label>
+            <input
+               type="range"
+               min="0"
+               max="360"
+               value="45"
+               class="hide1"
+               id="range-slider"
+            />
+            <label for="range-slider" id="label-2"
+               >Range: <span id="range-count"></span
+            ></label>
+            <div id="percent-slider">
+               <label for="hide2" id="label-3"
+                  >Percent: <span id="percent-count"></span
+               ></label>
+               <input type="range" min="0" max="100" value="25" class="hide2" />
+               <input type="range" min="0" max="100" value="50" class="hide2" />
+               <input type="range" min="0" max="100" value="75" class="hide2" />
+            </div>
+            <input
+               type="color"
+               name="Color Picker"
+               class="picker-input"
+               id="input-color1"
+            />
+            <input
+               type="color"
+               name="Color Picker2"
+               class="picker-input hide3"
+               id="input-color2"
+            />
+            <input
+               type="color"
+               name="Color Picker3"
+               class="picker-input hide4"
+               id="input-color3"
+            />
+         </div>
+         <div id="inspection">
+            <ul>
+               <li><img id="img" src="" alt="img.src" /></li>
+               <li class="inspection-hover" id="name">person.name</li>
+               <li class="inspection-hover" id="position">person.posittion</li>
+               <li class="inspection-hover" id="started">person.start</li>
+               <li class="inspection-hover" id="hobby">person.hobby</li>
+               <li>
+                  <button class="prev-btn">&#60;</button>
+                  <button class="next-btn">&#62;</button>
+               </li>
+            </ul>
+         </div>
+      </main>
+
+      <script src="js/calculator.js"></script>
+      <script src="js/color-picker.js"></script>
+      <script src="js/inspection.js"></script>
+   </body>
+</html>

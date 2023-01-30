@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media training</title>
+    <style>
+        
+        div {
+            display: flex;
+        }
+
+        .flex {
+            border: 5px double yellowgreen;
+            border-radius: 100% 100% 100% 100% / 100% 30% 100% 30%;
+        }
+        
+        @media (max-width: 576px) {
+            div {
+                flex-direction: column;
+            }
+            .flex {
+                background-color: aqua;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div >
+        <p class="flex">Valami Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam aperiam error voluptates itaque quos dicta modi quis, rem perspiciatis consequuntur corporis eius mollitia cupiditate laudantium, soluta culpa deserunt non. </p>
+        <p class="flex">Valami2</p>
+        <p class="flex">Valami3</p>
+        <p class="flex">Valami4</p>
+    </div>
+</body>
+
+</html>

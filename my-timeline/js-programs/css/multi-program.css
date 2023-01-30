@@ -1,0 +1,209 @@
+:root {
+    --color-coolblue: rgb(0, 119, 255);
+    --color-darkcoolblue: rgb(0, 92, 196);
+    --color-lightcoolblue: rgb(95, 170, 255);
+    --color-deepcoolblue: rgb(6, 0, 177);
+    --cool-black: rgba(0, 0, 0, 0.759);
+    --cool-grey: rgba(128, 128, 128, 0.695);
+    --border-radius: 10px;
+}
+
+body {
+    background-color: rgb(35, 119, 119);
+    background-size: 100% 200%;
+    background-image: linear-gradient(-45deg,
+            rgba(59, 173, 227, 1) 0%,
+            rgba(87, 111, 230, 1) 25%,
+            rgba(152, 68, 183, 1) 75%,
+            rgba(255, 53, 127, 1) 100%);
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: larger;
+    color: black;
+    text-shadow: 3px 3px 1px rgba(0, 255, 255, 0.875);
+    border-radius: 200px;
+    border: 5px solid rgba(221, 0, 255, 0.559);
+    margin: 20px 0;
+}
+
+nav ul li a:hover {
+    text-shadow: 3px 3px 1px black;
+    border: 5px solid rgba(221, 0, 255, 0.851);
+    color: rgba(0, 255, 255, 0.875);
+}
+/* calculator */
+#calculator-body {
+    background: rgb(2, 0, 36);
+    background:
+        linear-gradient(169deg,
+            var(--color-darkcoolblue) 0%,
+            var(--color-deepcoolblue) 25%,
+            var(--color-darkcoolblue) 50%,
+            var(--color-deepcoolblue) 75%,
+            var(--color-darkcoolblue) 100%);
+    border-radius: var(--border-radius);
+    width: 350px;
+    height: 500px;
+    
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+#calculator-body:hover {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
+
+#calculator-body ul {
+    list-style: none;
+    display: grid;
+    grid-template-areas:
+        "history history history del"
+        "current current current plus"
+        "n7 n8 n9 division"
+        "n4 n5 n6 multip"
+        "n1 n2 n3 minus"
+        "n0 n0 sum sum";
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    gap: 5px;
+    padding: 5px;
+    margin: 0;
+    height: 98%;
+}
+
+#calculator-body ul li {
+    display: flex;
+    border: 5px solid var(--color-darkcoolblue);
+    border-radius: var(--border-radius);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#calculator-body ul #history,
+#calculator-body ul #current {
+    font-size: 30px;
+    display: flow-root;
+    overflow-wrap: anywhere;
+    text-align: end;
+    max-width: 245px;
+    min-height: 90px;
+}
+
+#calculator-body ul li:hover {
+    animation: hold 1s 0s 1 forwards;
+    border: 5px solid var(--color-lightcoolblue);
+    background-color: rgba(0, 255, 255, 0.677);
+}
+
+#calculator-body ul li button {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: calc(2 * var(--border-radius));
+    border: none;
+    background-color: rgba(0, 227, 227, 0.468);
+    font-weight: 900;
+    color: rgb(71, 70, 70);
+    text-shadow: 1px 1px 1px var(--color-lightcoolblue);
+}
+
+#calculator-body ul li button:hover {
+    background-color: rgba(0, 227, 227, 0.815);
+}
+
+#calculator-body ul> :nth-child(1) {
+    grid-area: history;
+    background-color: var(--color-lightcoolblue);
+}
+
+#calculator-body ul> :nth-child(2) {
+    grid-area: current;
+    background-color: var(--color-lightcoolblue);
+}
+
+#calculator-body ul> :nth-child(3) {
+    grid-area: minus;
+}
+
+#calculator-body ul> :nth-child(4) {
+    grid-area: multip;
+}
+
+#calculator-body ul> :nth-child(5) {
+    grid-area: division;
+}
+
+#calculator-body ul> :nth-child(6) {
+    grid-area: n0;
+}
+
+#calculator-body ul> :nth-child(7) {
+    grid-area: n1;
+}
+
+#calculator-body ul> :nth-child(8) {
+    grid-area: n2;
+}
+
+#calculator-body ul> :nth-child(9) {
+    grid-area: n3;
+}
+
+#calculator-body ul> :nth-child(10) {
+    grid-area: n4;
+}
+
+#calculator-body ul> :nth-child(11) {
+    grid-area: n5;
+}
+
+#calculator-body ul :nth-child(12) {
+    grid-area: n6;
+}
+
+#calculator-body ul> :nth-child(13) {
+    grid-area: n7;
+}
+
+#calculator-body ul> :nth-child(14) {
+    grid-area: n8;
+}
+
+#calculator-body ul> :nth-child(15) {
+    grid-area: n9;
+}
+
+#calculator-body ul> :nth-child(16) {
+    grid-area: plus;
+}
+
+#calculator-body ul> :nth-child(17) {
+    grid-area: del;
+}
+
+#calculator-body ul> :nth-child(18) {
+    grid-area: sum;
+}
+
+@keyframes hold {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}

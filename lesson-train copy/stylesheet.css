@@ -1,0 +1,40 @@
+#nav {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+a {
+    text-decoration: none;
+}
+
+#left-nav-cont {
+    display: grid;
+    grid-template-columns: repeat(9, 4em);
+    font-weight: 700;
+    gap: 10px;
+    border: 5px solid salmon;
+}
+
+#right-nav-cont {  
+    justify-self: end;
+}
+
+#right-nav-cont > a {
+    margin: 10px;
+}
+
+.hidable-menu {
+    display: none;
+}
+
+#left-nav-cont :nth-child(9):hover {
+    background-color: aqua;
+}
+
+/* The hovering + selecting + showing */
+#left-nav-cont :nth-child(9):hover + .hidable-menu {
+    display: grid;
+    grid-column: 1 / span 15;
+    grid-row: 2 / span auto;
+    background-color: aqua;
+}

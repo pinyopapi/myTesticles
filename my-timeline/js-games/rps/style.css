@@ -1,0 +1,260 @@
+:root {
+    --neon-aqua: rgb(5, 216, 216);
+    --neon-magenta: rgb(255, 0, 234);
+    --neon-bluish: rgba(85, 4, 235, 0.645);
+    --neon-white: rgba(255, 255, 255, 0.464);
+    --neon-black: rgba(0, 0, 0, 0.486);
+    --simple-neon-shadow:
+        2px 0 var(--neon-magenta),
+        2px 2px var(--neon-aqua),
+        2px -2px var(--neon-magenta),
+        -2px 0 var(--neon-aqua),
+        -2px 2px var(--neon-magenta),
+        -2px -2px var(--neon-aqua),
+        0 0px var(--neon-magenta),
+        0 2px var(--neon-aqua),
+        0 -2px var(--neon-magenta),
+
+        2px 0 10px var(--neon-magenta),
+        2px 2px 10px var(--neon-aqua),
+        2px -2px 10px var(--neon-magenta),
+        -2px 0 10px var(--neon-aqua),
+        -2px 2px 10px var(--neon-magenta),
+        -2px -2px 10px var(--neon-aqua),
+        0 0px 10px var(--neon-magenta),
+        0 2px 10px var(--neon-aqua),
+        0 -2px 10px var(--neon-magenta),
+
+        2px 0 20px var(--neon-magenta),
+        2px 2px 20px var(--neon-aqua),
+        2px -2px 20px var(--neon-magenta),
+        -2px 0 20px var(--neon-aqua),
+        -2px 2px 20px var(--neon-magenta),
+        -2px -2px 20px var(--neon-aqua),
+        0 0px 20px var(--neon-magenta),
+        0 2px 20px var(--neon-aqua),
+        0 -2px 20px var(--neon-magenta);
+    --shiny-neon-shadow:
+        2px 0 var(--neon-magenta),
+        2px 2px var(--neon-aqua),
+        2px -2px var(--neon-magenta),
+        -2px 0 var(--neon-aqua),
+        -2px 2px var(--neon-magenta),
+        -2px -2px var(--neon-aqua),
+        0 0px var(--neon-magenta),
+        0 2px var(--neon-aqua),
+        0 -2px var(--neon-magenta),
+
+        2px 0 20px var(--neon-magenta),
+        2px 2px 20px var(--neon-aqua),
+        2px -2px 20px var(--neon-magenta),
+        -2px 0 20px var(--neon-aqua),
+        -2px 2px 20px var(--neon-magenta),
+        -2px -2px 20px var(--neon-aqua),
+        0 0px 20px var(--neon-magenta),
+        0 2px 20px var(--neon-aqua),
+        0 -2px 20px var(--neon-magenta),
+
+        2px 0 40px var(--neon-magenta),
+        2px 2px 40px var(--neon-aqua),
+        2px -2px 40px var(--neon-magenta),
+        -2px 0 40px var(--neon-aqua),
+        -2px 2px 40px var(--neon-magenta),
+        -2px -2px 40px var(--neon-aqua),
+        0 0px 40px var(--neon-magenta),
+        0 2px 40px var(--neon-aqua),
+        0 -2px 40px var(--neon-magenta);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "comp comp comp"
+        "user user user"
+        "result result result"
+        "rock paper scissors"
+        ". footer footer";
+    grid-template-rows: auto auto auto auto 13% 20%;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Sofia", sans-serif;
+    background-image: url("src/5162027.jpg");
+}
+
+.neon-duo {
+    color: white;
+    text-shadow:
+        2px 0 var(--neon-magenta),
+        2px 2px var(--neon-aqua),
+        2px -2px var(--neon-magenta),
+        -2px 0 var(--neon-aqua),
+        -2px 2px var(--neon-magenta),
+        -2px -2px var(--neon-aqua),
+        0 0px var(--neon-magenta),
+        0 2px var(--neon-aqua),
+        0 -2px var(--neon-magenta),
+
+        2px 0 10px var(--neon-magenta),
+        2px 2px 10px var(--neon-aqua),
+        2px -2px 10px var(--neon-magenta),
+        -2px 0 10px var(--neon-aqua),
+        -2px 2px 10px var(--neon-magenta),
+        -2px -2px 10px var(--neon-aqua),
+        0 0px 10px var(--neon-magenta),
+        0 2px 10px var(--neon-aqua),
+        0 -2px 10px var(--neon-magenta);
+}
+
+body h2 span {
+    border-radius: 50px;
+    padding: 0.75em;
+    animation: btnHover 1s forwards infinite;
+}
+
+button,
+span {
+    background:
+        linear-gradient(153deg,
+            var(--neon-black) 0%,
+            var(--neon-white) 25%,
+            var(--neon-black) 50%,
+            var(--neon-white) 75%,
+            var(--neon-black) 100%);
+    border-radius:
+        100% 10% 100% 10% / 100% 10% 100% 10%;
+    border-color: var(--neon-white);
+    font-size: 1.5rem;
+    font-family: "Sofia", sans-serif;
+}
+
+button:active {
+    background:
+        linear-gradient(153deg,
+            var(--neon-black) 10%,
+            var(--neon-white) 25%,
+            var(--neon-black) 40%,
+            var(--neon-white) 60%,
+            var(--neon-white) 75%,
+            var(--neon-black) 90%);
+}
+
+button:hover {
+    text-shadow: var(--simple-neon-shadow);
+    animation: btnHover 1s forwards infinite;
+    box-shadow: 0px 4px 5px 5px var(--neon-bluish);
+}
+
+@keyframes btnHover {
+    0% {
+        transform: translateY(-1px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    10% {
+        transform: translateY(-2px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    20% {
+        transform: translateY(-3px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    30% {
+        transform: translateY(-4px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    40% {
+        transform: translateY(-5px);
+        text-shadow: var(--shiny-neon-shadow);
+    }
+    50% {
+        transform: translateY(-6px);
+        text-shadow: var(--shiny-neon-shadow);
+    }
+    60% {
+        transform: translateY(-5px);
+        text-shadow: var(--shiny-neon-shadow);
+    }
+    70% {
+        transform: translateY(-4px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    80% {
+        transform: translateY(-3px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    90% {
+        transform: translateY(-2px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+    100% {
+        transform: translateY(-1px);
+        text-shadow: var(--simple-neon-shadow);
+    }
+
+}
+
+body> :first-child {
+    grid-area: comp;
+}
+
+body> :nth-child(2) {
+    grid-area: user;
+}
+
+body> :nth-child(3) {
+    grid-area: result;
+}
+
+#Rock {
+    grid-area: rock;
+}
+
+#Paper {
+    grid-area: paper;
+}
+
+body > footer {
+    grid-area: footer;
+}
+
+body > footer > nav > ul {
+    list-style: none;
+}
+
+body > footer > nav > ul {
+    text-align: end;
+    margin: 0;
+    padding: 0;
+}
+
+body > footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+body > footer > nav > ul > li a {
+    background-color: rgba(0, 255, 255, 0.308);
+    color: rgb(0, 0, 0);
+    text-shadow: var(--simple-neon-shadow);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+body>h1 {
+    max-width: calc(100% - 50px);
+    grid-area: title;
+    animation: 2s movinTitle 3s both infinite
+}
+
+@keyframes movinTitle {
+    0% {transform: rotate(0) translateX(0);}
+    25% {transform: rotate(25deg) translateX(50px);}
+    50% {transform: rotate(0) translateX(0) translateY(0);}
+    75% {transform: rotate(-25deg) translateX(-50px);}
+    100% {transform: rotate(0) translateX(0);}
+}
+
+#Scissors {
+    grid-area: scissors;
+}

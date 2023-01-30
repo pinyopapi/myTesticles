@@ -1,0 +1,117 @@
+:root {
+    --color-orange: orange;
+    --color-red: rgb(255, 21, 0);
+    --color-yellow: yellow;
+
+}
+
+body {
+    background-image: url("img-src/bricky-background.jpg");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-shadow: 
+        1px -1px 1px black,
+        1px 1px 1px grey,
+        -1px -1px 1px rgb(211, 211, 211),
+        -1px 1px 1px var(--color-orange);
+    color: var(--color-red);
+    background-color: rgba(240, 136, 0, 0.614);
+    padding: -5px;
+    border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+}
+
+nav ul li a:hover {
+    background-color: rgba(240, 136, 0, 0.863);
+    text-shadow: 
+        1px -1px 1px rgb(58, 10, 10),
+        1px 1px 1px rgb(198, 131, 131),
+        -1px -1px 1px rgb(209, 80, 0),
+        -1px 1px 1px var(--color-orange);
+}
+
+h1 {
+    width: calc(100% - 25px);
+    text-align: center;
+    text-shadow: none;
+    font-size: 10rem;
+    color: transparent;
+    background-image:
+        url('img-src/bricky-background.jpg');
+    font-weight: 700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: contain;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: var(--color-orange);
+    margin: 0;
+    animation: move 12s 1s infinite forwards;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-family: 'Rubik Microbe', cursive;
+    margin: 0 calc(10%);
+    gap: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin: 0 calc(10%);
+
+}
+
+.flex p span {
+    display: inline-block;
+    animation: bobbing 5s 1s infinite forwards;
+}
+
+.flex> :nth-child(1)>span {
+    color: var(--color-orange);
+    flex-grow: 1;
+}
+
+.flex> :nth-child(2)>span {
+    color: var(--color-yellow);
+    flex-grow: 1;
+}
+
+.flex> :nth-child(3)>span {
+    color: rgb(57, 255, 2);
+    flex-grow: 3;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid var(--color-orange);
+    border-radius: 25px;
+}
+
+@keyframes move {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(25px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(25px);}
+    100% {transform: translateX(0px);}
+}
+
+@keyframes bobbing {
+    0% {transform: scale(0.95);}
+    25% {transform: scale(1.0);}
+    50% {transform: scale(1.05);}
+    75% {transform: scale(1.0);}
+    100% {transform: scale(0.95);}
+}

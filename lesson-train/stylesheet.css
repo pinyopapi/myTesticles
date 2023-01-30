@@ -1,0 +1,33 @@
+
+.container {
+    display: grid;
+    grid-template-areas: 
+            "b1 b1 b2 b3"
+            "b4 b5 b5 b3";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.card {
+    border: 5px solid salmon;
+}
+
+.card1 {
+    grid-area: b1;
+}
+
+.card2 {
+    grid-area: b2;
+}
+
+.card3 {
+    grid-area: b3;
+}
+
+.card4 {
+    grid-area: b4;
+}
+
+.card5 {
+    grid-area: b5;
+}
